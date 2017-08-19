@@ -2,55 +2,39 @@
  * This class is the main view for the application. It is specified in app.js as the
  * "mainView" property. That setting causes an instance of this class to be created and
  * added to the Viewport container.
+ *
+ * TODO - Replace the content of this view to suit the needs of your application.
  */
+
 Ext.define('KitchenManager.view.main.Main', {
     extend: 'Ext.tab.Panel',
-    xtype: 'app-main',
 
     requires: [
-        'Ext.MessageBox',
-        'Ext.layout.Fit'
+        'KitchenManager.view.main.OrderGrid',
+        'KitchenManager.view.main.MainController'
     ],
 
     controller: 'main',
-    viewModel: 'main',
 
-    defaults: {
-        tab: {
-            iconAlign: 'top'
+    bbar: [
+        {
+            xtype: 'button',
+            text: 'test',
+            iconCls: 'x-fa fa-right'
         }
-    },
-
-    tabBarPosition: 'bottom',
+    ],
 
     items: [
-        // TODO - Replace the content of this view to suit the needs of your application.
         {
-            title: 'Home',
-            iconCls: 'x-fa fa-home',
+            title: '<span style="font-weight: bold; color: #d32f2f">Neu</span>',
             layout: 'fit',
-            // The following grid shares a store with the classic version's grid as well!
-            items: [{
-                xtype: 'mainlist'
-            }]
-        },{
-            title: 'Users',
-            iconCls: 'x-fa fa-user',
-            bind: {
-                html: '{loremIpsum}'
+            items: {
+                xtype: 'ordergrid'
             }
-        },{
-            title: 'Groups',
-            iconCls: 'x-fa fa-users',
-            bind: {
-                html: '{loremIpsum}'
-            }
-        },{
-            title: 'Settings',
-            iconCls: 'x-fa fa-cog',
-            bind: {
-                html: '{loremIpsum}'
-            }
+        }, {
+            title: 'Alle',
+            xtype: 'panel',
+            html: 'This is tab 2 content.'
         }
     ]
 });

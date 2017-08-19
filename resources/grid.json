@@ -1,0 +1,61 @@
+{
+  "success": true,
+  "data": [
+    {
+      "id": 1,
+      "status": "neu",
+      "address": {
+        "name": "Harald Appeldorn",
+        "street": "Friedhof. 33",
+        "zip": "44533",
+        "city": "Ingolstadt"
+      },
+      "items": [
+        {
+          "name": "Döner",
+          "price": 3.5,
+          "amount": 1,
+          "specials": [
+            {
+              "name": "Zwiebel",
+              "amount": 2
+            },{
+              "name": "Knoblauch",
+              "amount": 1
+            }
+          ]
+        },{
+          "name": "Pizza Funghi Nr 15",
+          "price": 6.0,
+          "amount": 2,
+          "specials": []
+        }
+      ]
+    },{
+      "id": 2,
+      "status": "wird zubereitet",
+      "address": {
+        "name": "Sabine Mix",
+        "street": "Aldeckerstr. 23",
+        "zip": "34996",
+        "city": "Buxtehude"
+      },
+      "items": [
+        {
+          "name": "Döner klein",
+          "price": 3.5,
+          "amount": 1,
+          "specials": [
+            {
+              "name": "Zwiebel",
+              "amount": "ohne"
+            },{
+              "name": "Knoblauch",
+              "amount": 1
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
