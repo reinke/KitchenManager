@@ -3,18 +3,29 @@
   padding: 5px 10px;
   border-radius: 2px;
   color: white;
-
   background-color: #2196f3;
+  height: 100%;
+  box-shadow: 2px 2px 8px 0 rgba(0, 0, 0, 0.4);
+  text-align: center;
+}
 
-  box-shadow: 2px 2px 8px 0 rgba(0, 0, 0, 0.4)
-
+.address-box div{
+  margin-left: auto;
+  margin-right: auto;
+  text-align: left;
+  display: inline-block;
+  width: auto;
 }
 
 .item-box{
+  height: auto;
+  min-height: inherit;
   background-color: #f39b34;
   margin-bottom: 2px;
   overflow: hidden;
   text-overflow: ellipsis;
+  font-size: 12px;
+  text-align: left;
 }
 
 .row-action-right .x-icon-el:before{

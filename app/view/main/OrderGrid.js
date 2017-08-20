@@ -53,9 +53,11 @@ Ext.define('KitchenManager.view.main.OrderGrid', {
             tpl: [
                 '<tpl for="address">',
                     '<div class="address-box">',
-                        '{name}<br />',
-                        '{street}<br />',
-                        '{zip} {city}',
+                        '<div>',
+                            '{name}<br />',
+                            '{street}<br />',
+                            '{zip} {city}',
+                        '</div>',
                     '</div>',
                 '</tpl>'
 
