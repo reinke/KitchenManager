@@ -30,6 +30,26 @@
           "price": 6.0,
           "amount": 2,
           "specials": []
+        },{
+          "name": "Pizza Pomadori Nr 16",
+          "price": 6.0,
+          "amount": 2,
+          "specials": []
+        },{
+          "name": "Pizza Salami Nr 17",
+          "price": 6.0,
+          "amount": 2,
+          "specials": []
+        },{
+          "name": "Pizza Margheritta Nr 1",
+          "price": 6.0,
+          "amount": 2,
+          "specials": []
+        },{
+          "name": "Pizza Hawai Nr 19",
+          "price": 6.0,
+          "amount": 2,
+          "specials": []
         }
       ]
     },{

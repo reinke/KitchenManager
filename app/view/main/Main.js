@@ -22,14 +22,6 @@ Ext.define('KitchenManager.view.main.Main', {
         type: 'card'
     },
 
-    bbar: [
-        {
-            xtype: 'button',
-            text: 'test',
-            iconCls: 'x-fa fa-right'
-        }
-    ],
-
     items: [
         {
             xtype: 'panel',
@@ -88,7 +80,7 @@ Ext.define('KitchenManager.view.main.Main', {
             reference: 'detailCardPanel',
             tbar: [
                 {
-                    iconCls: 'x-fa fa-chevron-left',
+                    iconCls: 'x-fa fa-chevron-left big-icon',
                     handler: 'onMainView'
                 }
             ]

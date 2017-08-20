@@ -1,25 +1,41 @@
+.item-box,
 .address-box{
   padding: 5px 10px;
-  border-style: solid;
-  border-width: 1px 4px;
-  border-color: #dadada;
-  border-radius: 8px;
-  color: #555;
+  border-radius: 2px;
+  color: white;
 
-  @include background(linear-gradient(transparent, #dadada, transparent));
+  background-color: #2196f3;
+
+  box-shadow: 2px 2px 8px 0 rgba(0, 0, 0, 0.4)
 
 }
 
+.item-box{
+  background-color: #f39b34;
+  margin-bottom: 2px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
 .row-action-right .x-icon-el:before{
-  font-size: 40pt;
+  font-size: 40pt !important;
 }
 
 .cell-red,
 .cell-black{
-  font-size: 18px;
+  font-size: 18px !important;
   font-weight: bold;
 }
 
 .cell-red{
   color: rgba(166, 19, 12, 0.86);
+}
+
+.big-icon{
+  width: 32px !important;
+  height: 32px !important;
+}
+
+.big-icon:before{
+  font-size: 24px !important;
 }
