@@ -34,14 +34,21 @@ Ext.define('KitchenManager.view.main.OrderGrid', {
             }
         },
         {
-            flex: 1
+            flex: 1,
+            dataIndex: 'created',
+            type: 'date',
+            renderer: function(date){
+                var diff = new Date() - date;
+                diff = new Date(diff-3600000);
+                diff.getMinutes()
+            }
         },
         {
             cell: {
                 tools: {
                     right: {
-                        //iconCls: 'x-fa fa-right',
-                        handler: 'onApprove'
+                        handler: 'onDetailView',
+                        cls: 'row-action-right'
                     }
                 }
             }

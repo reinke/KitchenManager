@@ -9,6 +9,10 @@ Ext.define('KitchenManager.view.main.model.GridModel', {
             name: 'status',
             type: 'auto'
         },{
+            name: 'created',
+            type: 'date',
+            dateFormat: 'Y-m-d H:i'
+        },{
             name: 'cientName',
             type: 'string'
         },{
