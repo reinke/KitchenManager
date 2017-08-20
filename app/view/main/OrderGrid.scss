@@ -10,3 +10,13 @@
 .row-action-right .x-icon-el:before{
   font-size: 40pt;
 }
+
+.cell-red,
+.cell-black{
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.cell-red{
+  color: rgba(166, 19, 12, 0.86);
+}
