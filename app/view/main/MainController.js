@@ -35,5 +35,12 @@ Ext.define('KitchenManager.view.main.MainController', {
 
     destroy: function() {
         Ext.uninterval(this.timer);
+    },
+
+    onSearch: function(field, e){
+        if(e.getKey() == e.ENTER){
+            //TODO ajax
+            var val = field.getValue();
+        }
     }
 });

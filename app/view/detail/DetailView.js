@@ -11,5 +11,12 @@ Ext.define('KitchenManager.view.detail.DetailView', {
 
     config: {
         record: null
-    }
+    },
+
+    tbar: [
+        {
+            iconCls: 'x-fa fa-chevron-left big-icon',
+            handler: 'onMainView'
+        }
+    ]
 });

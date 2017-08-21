@@ -1,11 +1,3 @@
-/**
- * This class is the main view for the application. It is specified in app.js as the
- * "mainView" property. That setting causes an instance of this class to be created and
- * added to the Viewport container.
- *
- * TODO - Replace the content of this view to suit the needs of your application.
- */
-
 Ext.define('KitchenManager.view.main.Main', {
     extend: 'Ext.panel.Panel',
 
@@ -76,13 +68,7 @@ Ext.define('KitchenManager.view.main.Main', {
         },
         {
             xtype: 'detailview',
-            reference: 'detailCardPanel',
-            tbar: [
-                {
-                    iconCls: 'x-fa fa-chevron-left big-icon',
-                    handler: 'onMainView'
-                }
-            ]
+            reference: 'detailCardPanel'
         }
     ]
 });

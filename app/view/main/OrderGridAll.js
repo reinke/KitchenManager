@@ -10,7 +10,7 @@ Ext.define('KitchenManager.view.main.OrderGridAll.',{
         viewModel: {}
     },
 
-    //plugins: 'gridfilters',
+    hideHeaders: true,
 
     columns:[
         {
@@ -65,5 +65,18 @@ Ext.define('KitchenManager.view.main.OrderGridAll.',{
             }
         }
 
+    ],
+
+    items: [
+        {
+            xtype: 'toolbar',
+            docked: 'top',
+            items: {
+                xtype: 'searchfield',
+                listeners: {
+                    keypress: 'onSearch'
+                }
+            }
+        }
     ]
 })
