@@ -34,8 +34,7 @@ Ext.define('KitchenManager.view.main.Main', {
                     xtype: 'ordergrid'
                 },
                 {
-                    xtype: 'panel',
-                    html: 'hkjdfkjshdf'
+                    xtype: 'gridAll'
                 }
             ],
 

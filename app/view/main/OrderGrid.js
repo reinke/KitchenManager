@@ -71,7 +71,7 @@ Ext.define('KitchenManager.view.main.OrderGrid', {
             tpl: [
                 '<tpl for="items">',
                     '<div class="item-box">',
-                        'x{amount} - {name}',
+                        '{amount}x - {name}',
                     '</div>',
                 '</tpl>',
 

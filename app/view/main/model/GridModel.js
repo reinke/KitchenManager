@@ -13,10 +13,10 @@ Ext.define('KitchenManager.view.main.model.GridModel', {
             type: 'date',
             dateFormat: 'Y-m-d H:i'
         },{
-            name: 'cientName',
+            name: 'clientName',
             type: 'string'
         },{
-            name: 'address',
+            name: 'address.name',
             type: 'string'
         },{
             name: 'items',
