@@ -16,7 +16,16 @@ Ext.define('KitchenManager.view.detail.DetailView', {
     tbar: [
         {
             iconCls: 'x-fa fa-chevron-left big-icon',
-            handler: 'onMainView'
+            handler: 'onMainView',
+            //flex:1
+        },
+        '->',
+        {
+            iconCls:'x-fa fa-play big-icon',
+            style:{
+                color:'green'
+            }
         }
     ]
 });
+

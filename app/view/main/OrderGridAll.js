@@ -78,7 +78,18 @@ Ext.define('KitchenManager.view.main.OrderGridAll.',{
             header: 'Bestellung',
             flex:1,
             cell: {
-                tpl: '<tpl for="items"> <div class="item-box"> {amount}x - {name} </div></tpl>',
+                tpl: [
+                    '<tpl for="items">',
+                    '<tpl if="xindex &lt; 2">',
+                    '<div class="item-box">',
+                    '{amount}x - {name}',
+                    '</div>',
+                    '</tpl>',
+                    '<tpl if="xindex == 2">',
+                    '...',
+                    '</tpl>',
+                    '</tpl>',
+                ],
                 encodeHtml: false
             }
         },
