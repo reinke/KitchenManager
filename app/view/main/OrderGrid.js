@@ -68,15 +68,20 @@ Ext.define('KitchenManager.view.main.OrderGrid', {
         },
         {
             flex: 1,
-            tpl: [
-                '<tpl for="items">',
-                    '<div class="item-box">',
-                        '{amount}x - {name}',
-                    '</div>',
-                '</tpl>',
-
-            ],
+            xtype: 'templatecolumn',
             cell:{
+                tpl: [
+                    '<tpl for="items">',
+                        '<tpl if="xindex &lt; 2">',
+                            '<div class="item-box">',
+                                '{amount}x - {name}',
+                            '</div>',
+                        '</tpl>',
+                        '<tpl if="xindex == 2">',
+                            '...',
+                        '</tpl>',
+                    '</tpl>',
+                ],
                 encodeHtml: false
             }
         },
