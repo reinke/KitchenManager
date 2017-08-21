@@ -21,6 +21,10 @@ Ext.define('KitchenManager.view.main.model.GridModel', {
         },{
             name: 'items',
             type: 'auto'
+        },{
+            name: 'cellCls',
+            type: 'string',
+            persist: false
         }
     ]
 });

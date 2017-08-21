@@ -3,7 +3,7 @@
   "data": [
     {
       "id": 1,
-      "status": "neu",
+      "status": "new",
       "created": "2017-08-20 12:34",
       "address": {
         "name": "Harald Appeldorn",
@@ -54,7 +54,7 @@
       ]
     },{
       "id": 2,
-      "status": "wird zubereitet",
+      "status": "preparation",
       "created": "2017-08-20 12:14",
       "address": {
         "name": "Sabine Mix",
@@ -80,7 +80,7 @@
       ]
     },{
       "id": 3,
-      "status": "wird zubereitet",
+      "status": "preparation",
       "created": "2017-08-20 12:14",
       "address": {
         "name": "Sabine Mix",
@@ -106,7 +106,7 @@
       ]
     },{
       "id": 4,
-      "status": "wird zubereitet",
+      "status": "preparation",
       "created": "2017-08-20 12:14",
       "address": {
         "name": "Sabine Mix",

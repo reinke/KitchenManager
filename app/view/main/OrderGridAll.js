@@ -13,8 +13,8 @@ Ext.define('KitchenManager.view.main.OrderGridAll.',{
                     get: function(get) {
                         var stat = get('record.status');
                         var cls = {
-                            'neu': 'cell-bg-red',
-                            'wird zubereitet': 'cell-bg-blue'
+                            'new': 'cell-bg-red',
+                            'preparation': 'cell-bg-blue'
                         }
                         return cls[stat];
                     }
@@ -85,37 +85,29 @@ Ext.define('KitchenManager.view.main.OrderGridAll.',{
                     '{amount}x - {name}',
                     '</div>',
                     '</tpl>',
+                    '<div class="item-overflow">',
                     '<tpl if="xindex == 2">',
-                    '...',
+                    '+{[xcount]} weitere...',
                     '</tpl>',
-                    '</tpl>',
+                    '</div>',
+                    '</tpl>'
                 ],
                 encodeHtml: false
             }
         },
         {
             cell: {
+                align: 'center',
                 tools: {
                     right: {
                         handler: 'onDetailView',
                         cls: 'row-action-right'
                     }
-                }
+                },
+                cls: 'action-cell'
             }
+
         }
 
-    ],
-
-    items: [
-        {
-            xtype: 'toolbar',
-            docked: 'top',
-            items: {
-                xtype: 'searchfield',
-                listeners: {
-                    keypress: 'onSearch'
-                }
-            }
-        }
     ]
 })

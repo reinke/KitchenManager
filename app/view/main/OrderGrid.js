@@ -11,7 +11,15 @@ Ext.define('KitchenManager.view.main.OrderGrid', {
     hideHeaders: true,
 
     store: {
-        type: 'gridstore'
+        type: 'gridstore',
+        remoteFilter: false,
+        filters: [
+            {
+                property: 'status',
+                value: 'new',
+                operator: '='
+            }
+        ]
     },
 
     striped: true,
@@ -77,22 +85,26 @@ Ext.define('KitchenManager.view.main.OrderGrid', {
                                 '{amount}x - {name}',
                             '</div>',
                         '</tpl>',
-                        '<tpl if="xindex == 2">',
-                            '...',
-                        '</tpl>',
-                    '</tpl>',
+                        '<div class="item-overflow">',
+                            '<tpl if="xindex == 2">',
+                                '+{[xcount]} weitere...',
+                            '</tpl>',
+                        '</div>',
+                    '</tpl>'
                 ],
                 encodeHtml: false
             }
         },
         {
             cell: {
+                align: 'center',
                 tools: {
                     right: {
                         handler: 'onDetailView',
                         cls: 'row-action-right'
                     }
-                }
+                },
+                cls: 'action-cell'
             }
         }
     ]

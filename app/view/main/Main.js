@@ -10,6 +10,8 @@ Ext.define('KitchenManager.view.main.Main', {
 
     controller: 'main',
 
+    cls: 'kitchen-main-view',
+
     layout: {
         type: 'card'
     },
@@ -38,32 +40,43 @@ Ext.define('KitchenManager.view.main.Main', {
                     align: 'stretch',
                     pack: 'center'
                 },
-                defaults: {
-                    ui: 'action',
-                    shadow: true
-                },
-                items: {
-                    xtype: 'segmentedbutton',
-                    width: 300,
-                    value: 0,
-                    defaults: {
-                        flex: 1,
-                        ui: 'action'
-                    },
-                    items: [
-                        {
-                            text: 'Neue',
-                            value: 0
+                items: [
+                    {width:200},
+                    {flex:1},
+                    {
+                        xtype: 'segmentedbutton',
+                        width: 300,
+                        value: 0,
+                        ui: 'action',
+                        shadow: true,
+                        defaults: {
+                            flex: 1,
+                            ui: 'action'
+                        },
+                        items: [
+                            {
+                                text: 'Neue',
+                                value: 0
 
-                        }, {
-                            text: 'Alle',
-                            value: 1
+                            }, {
+                                text: 'Alle',
+                                value: 1
+                            }
+                        ],
+                        listeners: {
+                            change: 'onChange'
                         }
-                    ],
-                    listeners: {
-                        change: 'onChange'
+                    },
+                    {flex:1},
+                    {
+                        xtype: 'searchfield',
+                        width: 200,
+                        listeners: {
+                            keypress: 'onSearch'
+                        },
+                        shadow: false
                     }
-                }
+                ]
             }
         },
         {
