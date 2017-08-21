@@ -50,3 +50,12 @@
 .big-icon:before{
   font-size: 24px !important;
 }
+
+.cell-bg-red{
+  background-color: rgb(255, 105, 83);
+  box-shadow: 2px 0px 8px 0 rgba(0, 0, 0, 0.4);
+}
+.cell-bg-blue{
+  background-color: rgb(103, 161, 255);
+  box-shadow: 2px 0px 8px 0 rgba(0, 0, 0, 0.4);
+}

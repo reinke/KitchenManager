@@ -7,52 +7,80 @@ Ext.define('KitchenManager.view.main.OrderGridAll.',{
     },
 
     itemConfig: {
-        viewModel: {}
+        viewModel: {
+            formulas: {
+                cellCls: {
+                    get: function(get) {
+                        var stat = get('record.status');
+                        var cls = {
+                            'neu': 'cell-bg-red',
+                            'wird zubereitet': 'cell-bg-blue'
+                        }
+                        return cls[stat];
+                    }
+                }
+            }
+        }
     },
 
     hideHeaders: true,
+    reference: 'gridall',
 
     columns:[
         {
             dataIndex: 'id',
             text:'Bestell Nr',
-            flex :1
-        },{
-            dataIndex: 'status',
-            text: 'Status',
-            flex:1
+            width: 50,
+            cell: {
+                bind: {
+                    value: '{record.id}',
+                    cls: '{cellCls}'
+                },
+                style: {
+                    fontWeight: 'bold',
+                    fontSize: '16px',
+                    color: 'white'
+                }
+            }
         },{
             dataIndex: 'created',
             type: 'date',
             text: 'Eingegangen',
-            flex:1
-        },{
-           // dataIndex: 'address',
-            //xtype: 'textcolumn',
-            text: 'Kunde',
-            flex:1,
+            format: 'd.m.Y H:i',
+            width: 140,
             cell: {
-                bind: {
-                    value: '{record.address.name}'
+                renderer: function(val, rec){
+                    var date = Ext.Date.parse(val, 'Y-m-d H:i');
+                    return Ext.Date.format(date, this.format);
                 }
-            },
-            filter:{
-                type:'search'
             }
         },{
             dataIndex: 'address',
             text: 'Adresse',
-            flex:1,
+            width: 150,
             cell: {
-                bind: {
-                    //value: '{record.address}'
+                tpl: [
+                    '<tpl for="address">',
+                        '<div class="address-box">',
+                            '<div>',
+                                '{name}<br />',
+                                '{street}<br />',
+                                '{zip} {city}',
+                            '</div>',
+                        '</div>',
+                    '</tpl>'
 
-                }
+                ],
+                encodeHtml: false
             }
         },{
             dataIndex: 'items',
             header: 'Bestellung',
-            flex:1
+            flex:1,
+            cell: {
+                tpl: '<tpl for="items"> <div class="item-box"> {amount}x - {name} </div></tpl>',
+                encodeHtml: false
+            }
         },
         {
             cell: {

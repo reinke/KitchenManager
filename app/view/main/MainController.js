@@ -39,8 +39,12 @@ Ext.define('KitchenManager.view.main.MainController', {
 
     onSearch: function(field, e){
         if(e.getKey() == e.ENTER){
-            //TODO ajax
-            var val = field.getValue();
+            var store = this.getView().lookup('gridall').getStore();
+
+            store.addFilter({
+                property: 'all',
+                value: field.getValue()
+            });
         }
     }
 });

@@ -10,6 +10,7 @@ Ext.define('KitchenManager.view.main.store.GridStore', {
     model: 'KitchenManager.view.main.model.GridModel',
 
     autoLoad: true,
+    remoteFilter: true,
 
     proxy: {
         type: 'ajax',
