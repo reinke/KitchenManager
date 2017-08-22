@@ -10,11 +10,16 @@ Ext.define('KitchenManager.view.detail.DetailController', {
     },
 
     onShow: function(){
-        this.getView().setHtml('Item ID: '+this.getView().getRecord().get('id'));
+        var rec = this.getView().getRec();
+        this.getView().setData(rec.data);
     },
 
     onMainView: function(){
         this.getView().up().setActiveItem(0);
+    },
+
+    onPLay: function(){
+
     }
 
 });

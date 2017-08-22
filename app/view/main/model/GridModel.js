@@ -16,7 +16,7 @@ Ext.define('KitchenManager.view.main.model.GridModel', {
             name: 'clientName',
             type: 'string'
         },{
-            name: 'address.name',
+            name: 'address',
             type: 'string'
         },{
             name: 'items',
@@ -25,6 +25,9 @@ Ext.define('KitchenManager.view.main.model.GridModel', {
             name: 'cellCls',
             type: 'string',
             persist: false
+        },{
+            name: 'comments',
+            type: 'string'
         }
     ]
 });

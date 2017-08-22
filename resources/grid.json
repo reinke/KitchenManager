@@ -11,15 +11,18 @@
         "zip": "44533",
         "city": "Ingolstadt"
       },
+      "comments": "Bitte hinten klingeln!",
       "items": [
         {
           "name": "Döner",
           "price": 3.5,
           "amount": 1,
+          "comments": "BIO bitte",
           "specials": [
             {
               "name": "Zwiebel",
-              "amount": 2
+              "amount": 2,
+              "remove": true
             },{
               "name": "Knoblauch",
               "amount": 1
@@ -29,6 +32,7 @@
           "name": "Pizza Funghi Nr 15",
           "price": 6.0,
           "amount": 2,
+          "comments": "BIO bitte",
           "specials": []
         },{
           "name": "Pizza Pomadori Nr 16",
@@ -39,11 +43,23 @@
           "name": "Pizza Salami Nr 17",
           "price": 6.0,
           "amount": 2,
-          "specials": []
+          "comments": "BIO bitte",
+          "specials": [
+            {
+              "name": "Zwiebel",
+              "amount": 1,
+              "remove": true
+            },{
+              "name": "Knoblauch",
+              "amount": 1,
+              "remove": true
+            }
+          ]
         },{
           "name": "Pizza Margheritta Nr 1",
           "price": 6.0,
           "amount": 2,
+          "comments": "BIO bitte",
           "specials": []
         },{
           "name": "Pizza Hawai Nr 19",
@@ -56,6 +72,7 @@
       "id": 2,
       "status": "preparation",
       "created": "2017-08-20 12:14",
+      "comments": "BIO bitte aber dalli",
       "address": {
         "name": "Sabine Mix",
         "street": "Aldeckerstr. 23",

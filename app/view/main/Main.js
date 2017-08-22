@@ -41,8 +41,14 @@ Ext.define('KitchenManager.view.main.Main', {
                     pack: 'center'
                 },
                 items: [
-                    {width:200},
-                    {flex:1},
+                    {
+                        width:200,
+                        xtype: 'component'
+                    },
+                    {
+                        flex:1,
+                        xtype: 'component'
+                    },
                     {
                         xtype: 'segmentedbutton',
                         width: 300,
@@ -67,7 +73,10 @@ Ext.define('KitchenManager.view.main.Main', {
                             change: 'onChange'
                         }
                     },
-                    {flex:1},
+                    {
+                        flex:1,
+                        xtype: 'component'
+                    },
                     {
                         xtype: 'searchfield',
                         width: 200,

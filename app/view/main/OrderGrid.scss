@@ -1,4 +1,5 @@
 .item-box,
+.comment-box,
 .address-box{
   padding: 5px 10px;
   border-radius: 2px;
@@ -17,6 +18,30 @@
   width: auto;
 }
 
+.comment-box,
+.address-detail{
+  margin: 20px;
+  float: left;
+  height: 80px;
+}
+
+.comment-box div,
+.address-detail div{
+  font-size: 16px;
+  padding: 10px 20px;
+  font-weight: bold;
+}
+
+.comment-box{
+  background-color: #dadada;
+  overflow-y: auto;
+}
+
+.comment-box div{
+  font-weight: normal;
+  color: #555;
+}
+
 .item-box{
   height: auto;
   min-height: inherit;
@@ -26,12 +51,12 @@
   text-overflow: ellipsis;
   font-size: 12px;
   text-align: left;
+  clear: both;
 }
 
 .row-action-right .x-icon-el:before{
   font-size: 60pt !important;
   color: white !important;
-  text-shadow: 2px 2px 8px #555;
 }
 
 .cell-red,
@@ -73,4 +98,57 @@
 
 .kitchen-main-view .x-gridcell-tool-dock{
  padding: 5px 12px;
+}
+
+.detail-view-cls hr{
+  clear: both;
+}
+
+.items-box{
+  padding: 5px 10px;
+}
+
+.plus-green,
+.special-row,
+.minus-red{
+  background-color: #d0463c;
+  box-shadow: 2px 2px 8px 0 rgba(0, 0, 0, 0.4);
+  text-align: center;
+  margin: 3px 3px 3px 10px;
+  height: 20px;
+  width: 20px;
+  float: left;
+  clear: both;
+}
+
+.plus-green{
+  background-color: #36ae3e;
+}
+
+.special-row{
+  float: left;
+  clear: none;
+  background-color: #1976d2;
+  height: 20px;
+  width: auto;
+  padding: 0 3px;
+  color: white;
+  margin-left: 5px;
+}
+
+.item-separator{
+  height: 5px;
+  clear: both;
+}
+
+.detail-comment{
+  margin: 3px 0;
+  height: auto;
+  float: none;
+  font-size: 12px;
+  padding: 0;
+}
+
+.detail-comment div{
+  padding: 3px;
 }

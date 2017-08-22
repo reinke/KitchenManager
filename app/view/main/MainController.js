@@ -29,7 +29,7 @@ Ext.define('KitchenManager.view.main.MainController', {
     },
 
     onDetailView: function(grid, info){
-        this.getView().lookup('detailCardPanel').setRecord(info.record);
+        this.getView().lookup('detailCardPanel').setRec(info.record);
         this.getView().setActiveItem(1);
     },
 

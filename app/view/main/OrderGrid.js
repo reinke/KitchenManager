@@ -87,7 +87,7 @@ Ext.define('KitchenManager.view.main.OrderGrid', {
                         '</tpl>',
                         '<div class="item-overflow">',
                             '<tpl if="xindex == 2">',
-                                '+{[xcount]} weitere...',
+                                '+{[xcount-1]} weitere...',
                             '</tpl>',
                         '</div>',
                     '</tpl>'
